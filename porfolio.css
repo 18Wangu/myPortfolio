@@ -8,20 +8,20 @@ html{
     background-color: #081324;
 }
 article{
-    padding: 0px 245px; /*rendre responsive*/
+    padding: 0px 245px;
 }
 span{
-    font-size: 32px;  /*rendre responsive*/
+    font-size: 32px;
     color: #5dedcd;
     font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
 }
 h1{
-    font-size: 32px;  /*rendre responsive*/
+    font-size: 32px;
     color: #ccd6f6;
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",system-ui,sans-serif;
 }
 p{
-    font-size: 20px;  /*rendre responsive*/
+    font-size: 20px;
     color: #a19a8f;
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",system-ui,sans-serif;
 }
@@ -30,6 +30,22 @@ strong{
     font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
     font-weight: normal;
 }
+
+/*Responsive Tablette*/
+@media (max-width: 768px){
+    article{
+        padding: 0px 80px;
+    }
+}
+
+/*Responsive Phone*/
+@media (max-width: 426px){
+    article{
+        padding: 0px 25px;
+    }
+}
+
+
 
 /******************navbar******************/
 nav{
@@ -75,30 +91,123 @@ nav a:hover{
     transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 }
 
+/*Responsive Tablette*/
+@media (max-width: 768px){
+    .navbar{
+        display: none;
+    }
+}
+
+/*Responsive Phone*/
+@media (max-width: 426px){
+    nav{
+        padding: 40px 25px 0px 8px;
+    }
+}
+
+
+
 /******************Home******************/
 #intro h1{
-    padding-top: 80px; /*rendre responsive*/
+    padding-top: 80px;
     color: #5dedcd;
-    font-size: 16px; /*rendre responsive*/
+    font-size: 16px; 
     font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
 }
 #intro h2{
     margin: 0px;
     color: #ccd6f6;
-    font-size: 80px; /*rendre responsive*/
+    font-size: 80px;
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",system-ui,sans-serif;
 }
 #intro h3{
     margin: 0px;
     color: #a19a8f;      
-    font-size: 70px; /*rendre responsive*/
+    font-size: 70px;
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",system-ui,sans-serif;
     line-height: 1;
 }
 #intro p{
     padding-top: 25px;
-    padding-bottom: 170px; /*rendre responsive*/
+    padding-bottom: 170px;
 }
+.contact_bouton_phone{
+    opacity: 0;
+}
+
+/*Responsive small computer*/
+@media (max-width: 1025px){
+    #intro{
+        padding-bottom: 100px;
+    }
+    #intro h2{
+        font-size: 50px;
+    }
+    #intro h3{
+        font-size: 50px;
+    }
+}
+
+/*Responsive Tablette*/
+@media (max-width: 768px){
+    #intro{
+        padding-bottom: 170px;
+    }
+    #intro h2{
+        padding-top: 20px;
+        font-size: 55px;
+    }
+    #intro h3{
+        font-size: 50px;
+    }
+    #intro p{
+        padding-top: 25px;
+        padding-bottom: 50px;
+    }
+    .contact_bouton_phone{
+        opacity: 1;
+        color: #5dedcd;
+        border: 1px solid #5dedcd;
+        border-radius: 5px;
+        padding: 10px 15px;
+        text-decoration: none;
+        font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+        font-size: 20px;
+    }
+    .contact_bouton_phone:hover{
+        background-color: #071f2c;
+        transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    }
+}
+
+/*Responsive Phone*/
+@media (max-width: 426px){
+    #intro{
+        padding-bottom: 190px;
+    }
+    #intro h2{
+        font-size: 40px;
+    }
+    #intro h3{
+        font-size: 40px;
+    }
+}
+
+/*Responsive small Phone*/
+@media (max-width: 325px){
+    #intro{
+        padding-bottom: 110px;
+    }
+    #intro h1{
+        padding-top: 40px;
+    }
+    #intro p{
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+}
+
+
 
 /******************About******************/
 #about{
@@ -110,6 +219,7 @@ nav a:hover{
 }
 .text_about{
     text-align: justify;
+    padding-top: 35px;
     padding-right: 120px;
 }
 .photo_profil{
@@ -137,6 +247,7 @@ nav a:hover{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding-top: 25px;
 }
 .puce::before{
     content: "▹";
@@ -144,12 +255,65 @@ nav a:hover{
     font-size: 25px;
 }
 
+/*Responsive small computer*/
+@media (max-width: 1025px){
+    #about{
+        margin: 0px 0px;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .text_about{
+        padding-right: 0px;
+    }
+}
+
+/*Responsive Tablette*/
+@media (max-width: 768px){
+    #about{
+        margin: 0px 0px;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .text_about{
+        padding-right: 0px;
+    }
+    .photo_profil{
+        margin-top: 70px;
+    }
+}
+
+/*Responsive Phone*/
+@media (max-width: 426px){
+    .skills{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*Responsive small Phone*/
+@media (max-width: 325px){
+    .photo_profil{
+        width: 220px;
+        filter: none;
+    }
+    .green_square{
+        top: -205px;
+        height: 230px;
+    }
+}
+
+
+
 /******************My Services******************/
 #services{
     margin: 0px 50px;
 }
 .webdesign{
-    padding-top: 20px;
+    padding-top: 35px;
     display: flex;
     flex-direction: row;
 }  
@@ -174,7 +338,7 @@ nav a:hover{
     color: #ccd6f6;
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",system-ui,sans-serif;
 }
-.responsive{
+.icone_balise_code{
     font-size: 45px;
 }
 .icon1{
@@ -184,11 +348,53 @@ nav a:hover{
 .icon2{
     width: 45px;
     height: 45px;
-    padding: 15px;
 }
 .service2 h2, .service3 h2{
     padding-bottom: 15px;
 }
+
+/*Responsive small computer*/
+@media (max-width: 1025px){
+    #services{
+        margin: 0px 0px;
+    }
+    .webdesign{
+        flex-wrap: wrap;
+    }
+    .service1, .service2, .service3{
+        padding: 25px;
+    }
+    .service1 h2, .service2 h2, .service3 h2{
+        padding: 25px 0px;
+    }
+}
+
+/*Responsive Tablette*/
+@media (max-width: 768px){
+    #services{
+        margin: 0px 0px;
+    }
+    .webdesign{
+        flex-direction: column;
+        align-items: center;
+    }
+    .service1, .service2, .service3{
+        width: 300px;
+        padding: 25px;
+    }
+    .service1 h2, .service2 h2, .service3 h2{
+        padding: 25px 0px;
+    }
+}
+
+/*Responsive small Phone*/
+@media (max-width: 325px){
+    .service1, .service2, .service3{
+        width: 240px;
+    }
+}
+
+
 
 /******************My Work******************/
 #work{
@@ -224,11 +430,6 @@ nav a:hover{
 .ecompro{
     width: 650px;
     border-radius: 15px;
-    box-shadow: #5dedcd 10px 10px 10px, #5dedcd -10px -10px 10px;
-}
-.ecompro:hover{
-    box-shadow: #5dedcd 11px 11px 15px, #5dedcd -11px -11px 15px;
-    transition: all 0.2s ease-in-out;
 }
 .align_right{
     text-align: end;
@@ -251,6 +452,81 @@ nav a:hover{
     height: 35px;
 }
 
+/*Responsive small computer*/
+@media (max-width: 1025px){
+    #work{
+        margin: 200px 0px;
+    }
+    .myproject{
+        margin: 35px 0px;
+    }
+    .projet1{
+        flex-direction: column;
+        align-items: center;  
+    }
+    .ecompro{
+        width: 500px;
+    }
+    .align_right{
+        text-align: center;
+    }
+    .align_right h2{
+        opacity: 0;
+    }
+    .encadre_bleu{
+        width: 350px;
+        text-align: center;
+        margin: 20px 0px;
+    }
+}
+
+/*Responsive Tablette*/
+@media (max-width: 768px){
+    #work{
+        margin: 200px 0px;
+    }
+    .myproject{
+        margin: 35px 0px;
+    }
+    .projet1{
+        flex-direction: column;
+        align-items: center;  
+    }
+    .ecompro{
+        width: 500px;
+    }
+    .align_right{
+        text-align: center;
+    }
+    .align_right h2{
+        opacity: 0;
+    }
+    .encadre_bleu{
+        width: 350px;
+        text-align: center;
+        margin: 20px 0px;
+    }
+}
+
+/*Responsive Phone*/
+@media (max-width: 426px){
+    .ecompro{
+        width: 350px;
+    }
+}
+
+/*Responsive small Phone*/
+@media (max-width: 325px){
+    .ecompro{
+        width: 280px;
+    }
+    .encadre_bleu{
+        width: 280px;
+    }
+}
+
+
+
 /******************contact******************/
 #contact{
     margin: 200px 50px;
@@ -263,14 +539,14 @@ form{
 }
 #name{
     width: 500px;
-    height: 25px;
+    height: 30px;
     border: 1px solid #ccd6f6;
     border-radius: 8px;
     background-color: #ccd6f6;
 }
 #email{
     width: 500px;
-    height: 25px;
+    height: 30px;
     border: 1px solid #ccd6f6;
     border-radius: 8px;
     background-color: #ccd6f6;
@@ -283,7 +559,7 @@ form{
     background-color: #ccd6f6;
 }
 #submit{
-    font-size: 28px;
+    font-size: 20px;
     color: #5dedcd;
     border: 2px solid #5dedcd;
     border-radius: 12px;
@@ -302,6 +578,37 @@ form{
     top: 0;
     left: 5px;
 }
+
+/*Responsive Phone*/
+@media (max-width: 426px){
+    #contact{
+        margin: 200px 0px;
+    }
+    #name{
+        width: 350px;
+    }
+    #email{
+        width: 350px;
+    }
+    #message{
+        width: 350px;
+    }
+}
+
+/*Responsive small Phone*/
+@media (max-width: 325px){
+    #name{
+        width: 280px;
+    }
+    #email{
+        width: 280px;
+    }
+    #message{
+        width: 280px;
+    }
+}
+
+
 
 /******************mail******************/
 .email{
@@ -331,6 +638,44 @@ form{
     background-color: #ccd6f6;
     vertical-align: middle;
 }
+.email_version_mobile{
+    display: none;
+}
+
+/*Responsive Tablette*/
+@media (max-width: 768px){
+    .email{
+        display: none;
+    }
+    .email_version_mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+    .email_version_mobile a{
+        padding: 0px 20px;
+        text-decoration: none;
+        font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+        color: #ccd6f6;
+        letter-spacing: 0.1em;
+        font-size: 18px;
+    }
+    .email_version_mobile::after{
+        content: "";
+        width: 160px;
+        height: 1px;
+        background-color: #ccd6f6;
+    }
+    .email_version_mobile::before{
+        content: "";
+        width: 160px;
+        height: 1px;
+        background-color: #ccd6f6;
+    }
+}
+
+
 
 /******************Réseaux sociaux******************/
 #réseau_sociaux{
@@ -357,9 +702,19 @@ form{
     vertical-align: middle;
 }
 
-
-
-
-
+/*Responsive Tablette*/
+@media (max-width: 768px){
+    #réseau_sociaux{
+        flex-direction: row;
+        justify-content: center;
+        position: static;
+    }
+    #réseau_sociaux a{
+        margin: 0px 15px;
+    }
+    #réseau_sociaux::after{
+        display: none;
+    }
+}
 
 
