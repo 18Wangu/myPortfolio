@@ -26,7 +26,7 @@ function observeSection(id) {
             }
         });
     }, {
-        rootMargin: "-300px"
+        rootMargin: "-200px"
     });
 
     sections.forEach(section => {
@@ -86,3 +86,19 @@ window.addEventListener('load', function() {
     }, 1800);
 });
 
+
+/********************************scroll to top********************************/
+const btn = document.querySelector('#button');
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 200) {
+    btn.classList.add('show');
+  } else {
+    btn.classList.remove('show');
+  }
+});
+
+btn.addEventListener('click', function(e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
