@@ -7,6 +7,7 @@
 html{
     background-color: #081324;
     cursor: none;
+    scroll-behavior: smooth;
 }
 html::-webkit-scrollbar{
     background-color: #081324;
@@ -877,4 +878,40 @@ form{
 .email, #réseau_sociaux {
     opacity: 0;
     transition: opacity 1s ease;
+}
+
+
+/***********************bouton scroll to top***********************/
+#button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #081324;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 30px;
+    right: 100px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    border: 1px solid #ccd6f6;
+    border-radius: 50%;
+    visibility: hidden;
+    z-index: 1000;
+    color: #ccd6f6;
+    transform: rotate(-90deg);
+}
+#button:hover {
+    background-color: #071f2c;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*Responsive Phone*/
+@media (max-width: 426px){
+    #button{
+        right: 30px;
+    }
 }
